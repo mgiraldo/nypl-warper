@@ -588,6 +588,7 @@ class MapsController < ApplicationController
       raster = LayerObj.new(mapobj)
       raster.name = "image"
       raster.type = MS_LAYER_RASTER;
+      raster.addProcessing("RESAMPLE=BILINEAR") # for smoother image
       raster.setProcessingKey("CLOSE_CONNECTION", "ALWAYS")
 
 
