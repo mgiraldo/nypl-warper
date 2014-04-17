@@ -377,6 +377,7 @@ end
       raster = LayerObj.new(map)
       raster.name = "image"
       raster.type =  MS_LAYER_RASTER 
+      raster.addProcessing("RESAMPLE=BILINEAR") # for smoother image
       raster.tileindex = @layer.tileindex_path
       raster.tileitem = "Location"
 
